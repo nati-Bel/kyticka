@@ -32,6 +32,9 @@ class GalleryController extends Controller
     public function show(string $id):JsonResource
     {
         $gallery = Gallery::find($id);
+        if ($gallery === null) {
+            abort(404);
+        }
         return new GalleryResource($gallery);
     }
 
