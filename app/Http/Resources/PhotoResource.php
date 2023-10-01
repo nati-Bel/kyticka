@@ -18,7 +18,7 @@ class PhotoResource extends JsonResource
             'id' => $this->id,
             'url' => $this->url,
             'description' => $this->description,
-            'gallery'=> $this->gallery->title,
+            'gallery'=> $this->gallery->title
         ];
     }
 }
